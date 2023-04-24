@@ -7,11 +7,11 @@ char kodowanie(char znak, int liczba){
     if(znak+liczba<=90) return znak+liczba;
     else return znak+liczba-26;
 }
-/*char dekodowanie(char znak, int liczba){
+char dekodowanie(char znak, int liczba){
     znak = toupper(znak);
-    if(znak-liczba>=64) return znak-liczba;
+    if(znak-liczba>=65) return znak-liczba;
     else return znak-liczba+26;
-}*/
+}
 int main(){
     string wiadomosc;
     int liczba;
@@ -24,4 +24,10 @@ int main(){
         szyfr+= kodowanie(wiadomosc[i], liczba);
     }
     cout<<"zaszyfrowana wiadomośc to: "<<szyfr<<endl;
+    string Szyfr=szyfr;
+    szyfr= "";
+    for(int i=0; i<Szyfr.length(); i++){
+        szyfr+= dekodowanie(Szyfr[i], liczba);
+    }
+    cout<<"zdekodowana wiadomośc to: "<<szyfr<<endl;
 }
