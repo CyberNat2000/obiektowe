@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 int main()
@@ -13,8 +14,10 @@ int main()
     int weryfikacja = 0;
         for(int i=0; i<10; i++){
             weryfikacja += (tablica[i] * pesel[i])%10; 
+            cout << (tablica[i] * pesel[i])%10 << endl;
+            cout << weryfikacja << endl;
         }
-        if(10-(weryfikacja%10)==int(pesel[10])){
+        if((10-(weryfikacja%10))%10==pesel[10]){
             cout << "PESEL poprawny" << endl;
             if(pesel[9]%2==0){
                 cout << "Jesteś kobietą" << endl;
@@ -27,4 +30,4 @@ int main()
         cout << "PESEL niepoprawny" << endl;
         }
     return 0;
-}          
+}
