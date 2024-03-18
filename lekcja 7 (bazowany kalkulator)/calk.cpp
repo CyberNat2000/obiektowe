@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int liczba1;
-    int liczba2;
+    float liczba1;
+    float liczba2;
     char znak;
     int wynik;
     cout << "Podaj pierwsza liczbe" << endl;
@@ -36,7 +36,7 @@ int main()
             }
             break;
         case '%':
-            wynik = liczba1 % liczba2;
+            wynik = (int)liczba1 % (int)liczba2;
             break;
         default:
             cout << "podano zly znak, prosze podac ponownie" << endl;
