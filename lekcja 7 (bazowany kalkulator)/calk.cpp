@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 int main()
@@ -34,6 +34,9 @@ int main()
                 i--;
                 continue;
             }
+            break;
+        case '^':
+            wynik = pow(liczba1, liczba2);
             break;
         case '%':
             wynik = (int)liczba1 % (int)liczba2;
