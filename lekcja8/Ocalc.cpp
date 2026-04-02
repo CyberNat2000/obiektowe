@@ -43,6 +43,11 @@ class xyz{
                             continue;
                 }}
             }
+            xyz(float a, float b, char znak1){
+                this->x = a;
+                this->y = b;
+                this->znak = znak1;
+            }
         private:
             float x,y;
             char znak;
@@ -50,13 +55,14 @@ class xyz{
 
 int main()
 { 
-    xyz liczba;
-    cout << "Podaj pierwsza liczbe" << endl;
+    xyz liczba = xyz((float)4.6, (float)9, (char)"/");
+    // dynamiczne które aktualnie nie jest potrzebne >>>> new xyz((float)4.5, (float)4.6, (char)"-");
+    /*cout << "Podaj pierwsza liczbe" << endl;
     liczba.SetX();
     cout << "Podaj znak dzialania" << endl;
     liczba.SetZnak();
     cout << "Podaj druga liczbe" << endl;
-    liczba.SetY();
+    liczba.SetY(); */
     float wynik = liczba.dzialanie();
     cout << "Wynik to :"<<wynik<<endl;
     return 0;
